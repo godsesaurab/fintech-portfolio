@@ -49,12 +49,12 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #00509e;
+    background-color: #336699;
     border-radius: 5px;
 }
 
 .showcase {
-    background: #00509e;
+    background: #336699;
     color: #fff;
     padding: 100px 0;
     text-align: center;
