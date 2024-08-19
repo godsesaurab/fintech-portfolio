@@ -1,7 +1,7 @@
 // scripts.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Example of smooth scrolling to sections
+    // Smooth scrolling to sections
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -11,4 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Disable caching for all resources
+    if ('serviceWorker' in navigator) {
+        caches.keys().then(function(cacheNames) {
+            cacheNames.forEach(function(cacheName) {
+                caches.delete(cacheName);
+            });
+        });
+    }
 });
