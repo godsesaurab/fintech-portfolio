@@ -118,4 +118,52 @@ nav ul li a {
 
 footer {
     background: #336699;
-    color:
+    color:     #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #99ccff;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .showcase h1 {
+        font-size: 2.5em;
+    }
+    .showcase p {
+        font-size: 1em;
+    }
+    .main h2 {
+        font-size: 1.5em;
+    }
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .showcase {
+        padding: 50px 0;
+    }
+    .showcase h1 {
+        font-size: 2em;
+    }
+    .showcase p {
+        font-size: 0.9em;
+    }
+    .main h2 {
+        font-size: 1.2em;
+    }
+}
