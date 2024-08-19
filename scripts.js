@@ -7,33 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(targetId).scrollIntoView({
                 behavior: 'smooth'
             });
-
-            // Highlight the current section
-            document.querySelectorAll('nav a').forEach(link => {
-                link.classList.remove('active');
-            });
-            this.classList.add('active');
-        });
-    });
-
-    // Add scroll event to highlight the current section
-    document.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('.main');
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollY >= sectionTop - 50 && scrollY < sectionTop + sectionHeight - 50) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        document.querySelectorAll('nav a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
         });
     });
 
@@ -45,4 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Highlight the current section in the navigation
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function changeNavHighlight() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+        
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+    }
+
+    window.addEventListener('scroll', changeNavHighlight);
 });
