@@ -16,6 +16,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Add scroll event to highlight the current section
+    document.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.main');
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollY >= sectionTop - 50 && scrollY < sectionTop + sectionHeight - 50) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
     // Disable caching for all resources
     if ('serviceWorker' in navigator) {
         caches.keys().then(function(cacheNames) {
