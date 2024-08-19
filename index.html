@@ -26,6 +26,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
@@ -44,12 +45,17 @@
             color: #fff;
             text-decoration: none;
             font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #99ccff;
         }
         .showcase {
-            background: #00509e;
+            background: linear-gradient(rgba(0, 80, 158, 0.8), rgba(0, 80, 158, 0.8)), url('https://source.unsplash.com/1600x900/?finance,technology') no-repeat center center/cover;
             color: #fff;
             padding: 100px 0;
             text-align: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .showcase h1 {
             font-size: 3em;
@@ -57,6 +63,8 @@
         }
         .showcase p {
             font-size: 1.2em;
+            max-width: 600px;
+            margin: auto;
         }
         .main {
             padding: 40px 0;
@@ -65,6 +73,17 @@
         .main h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .main h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: #00509e;
+            display: block;
+            margin: 10px auto;
         }
         .card {
             background: #fff;
@@ -78,6 +97,7 @@
         }
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .card h3 {
             margin-top: 0;
@@ -93,6 +113,9 @@
             color: #00509e;
             text-decoration: none;
             font-weight: bold;
+        }
+        .card a:hover {
+            text-decoration: underline;
         }
         .icon {
             font-size: 2em;
@@ -114,6 +137,13 @@
         footer a {
             color: #99ccff;
             text-decoration: none;
+            font-weight: bold;
+        }
+        footer a img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
 
         /* Responsive Styles */
@@ -186,7 +216,7 @@
                 <div class="card">
                     <div class="icon">👨‍💻</div>
                     <h3>About Me</h3>
-                    <p>Brief introduction about yourself.</p>
+                    <p>I am Saurab, a Data Scientist with a deep passion for Fintech. My expertise lies in leveraging machine learning and data analytics to drive impactful financial solutions.</p>
                 </div>
             </div>
         </div>
@@ -234,8 +264,17 @@
                 </div>
                 <div class="card">
                     <div class="icon">🤝</div>
+                    <h3>Soft Skills
+                </div>
+                <div class="card">
+                    <div class="icon">🤝</div>
                     <h3>Soft Skills</h3>
-                    <p>Communication, Teamwork, Problem-solving</p>
+                    <p>Communication, Teamwork, Problem-solving, Critical Thinking, Adaptability</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Domain Knowledge</h3>
+                    <p>Finance, Risk Management, Anti-Money Laundering, Fraud Detection, Fintech Innovations</p>
                 </div>
             </div>
         </div>
@@ -262,6 +301,18 @@
                     <p>Detecting fraudulent transactions using machine learning techniques.</p>
                     <a href="https://github.com/godsesaurab/fraud-detection" target="_blank">View Project</a>
                 </div>
+                <div class="card">
+                    <div class="icon">🏦</div>
+                    <h3>Loan Default Prediction</h3>
+                    <p>Building a predictive model to identify potential loan defaults using historical loan data.</p>
+                    <a href="https://github.com/godsesaurab/loan-default-prediction" target="_blank">View Project</a>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Customer Segmentation</h3>
+                    <p>Implementing clustering algorithms to segment customers based on purchasing behavior and financial profiles.</p>
+                    <a href="https://github.com/godsesaurab/customer-segmentation" target="_blank">View Project</a>
+                </div>
             </div>
         </div>
     </section>
@@ -279,11 +330,37 @@
                     <h3>Machine Learning Certification</h3>
                     <p>Issued by ABC Organization</p>
                 </div>
+                <div class="card">
+                    <div class="icon">📜</div>
+                    <h3>Financial Analysis Certification</h3>
+                    <p>Issued by Finance Academy</p>
+                </div>
             </div>
         </div>
     </section>
     <footer id="contact">
-        <p>Contact me via <a href="mailto:godsesaurab@gmail.com" target="_blank">email</a> (godsesaurab@gmail.com), or connect with me on <a href="https://www.linkedin.com/in/saurabgodse/" target="_blank">LinkedIn</a> (https://www.linkedin.com/in/saurabgodse/).</p>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to discuss opportunities, collaborations, or to just connect.</p>
+            <div class="section">
+                <div class="card">
+                    <a href="mailto:godsesaurab@gmail.com" target="_blank">
+                        <img src="https://img.icons8.com/fluency/48/000000/email.png" alt="Email Icon"> Email
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.linkedin.com/in/saurabgodse/" target="_blank">
+                        <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon"> LinkedIn
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/godsesaurab" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub Icon"> GitHub
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2024 Saurab Godse. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
