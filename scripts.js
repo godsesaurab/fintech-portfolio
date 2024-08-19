@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling to sections
     document.querySelectorAll('nav a').forEach(anchor => {
@@ -9,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(targetId).scrollIntoView({
                 behavior: 'smooth'
             });
+
+            // Highlight the current section
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
         });
     });
 
