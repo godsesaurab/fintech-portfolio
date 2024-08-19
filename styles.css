@@ -1,26 +1,27 @@
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-    color: #003366;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
+/* Header Styles */
 header {
-    background: #003366;
+    background: linear-gradient(135deg, #003366, #00509e);
     color: #fff;
     padding: 20px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -31,11 +32,11 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 20px 0 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -43,13 +44,23 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
+nav ul li a:hover {
+    background: #fff;
+    color: #003366;
+}
+
+/* Showcase Section */
 .showcase {
-    background: #00509e;
+    background: linear-gradient(135deg, #00509e, #003366);
     color: #fff;
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
+    background-size: cover;
 }
 
 .showcase h1 {
@@ -59,36 +70,43 @@ nav ul li a {
 
 .showcase p {
     font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
+/* Main Section */
 .main {
-    padding: 40px 0;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .main h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #003366;
 }
 
+/* Card Styles */
 .card {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 25px;
     width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: #003366;
 }
 
 .card p {
@@ -98,50 +116,62 @@ nav ul li a {
 
 .card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     color: #00509e;
     text-decoration: none;
     font-weight: bold;
+    border-bottom: 2px solid #00509e;
+    transition: color 0.3s, border-color 0.3s;
 }
 
+.card a:hover {
+    color: #003366;
+    border-color: #003366;
+}
+
+/* Icon Styles */
 .icon {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
     color: #00509e;
 }
 
+/* Section Styles */
 .section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
+/* Footer Styles */
 footer {
-    background: #336699;
-    color:     #fff;
+    background: #003366;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
 
 footer a {
     color: #99ccff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     .showcase h1 {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
     .showcase p {
         font-size: 1em;
     }
     .main h2 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
     .card {
         width: 100%;
@@ -155,15 +185,15 @@ footer a {
         margin: 10px 0;
     }
     .showcase {
-        padding: 50px 0;
+        padding: 60px 20px;
     }
     .showcase h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     .showcase p {
         font-size: 0.9em;
     }
     .main h2 {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
