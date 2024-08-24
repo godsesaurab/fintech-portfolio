@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Highlight the current section in the navigation with a 10% threshold
+    // Highlight the current section in the navigation with no offset
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     function changeNavHighlight() {
         let index = sections.length;
 
-        while (--index && window.scrollY + (window.innerHeight * 0.1) < sections[index].offsetTop) {}
+        while (--index && window.scrollY < sections[index].offsetTop) {}
         
         navLinks.forEach((link) => link.classList.remove('active'));
         navLinks[index].classList.add('active');
