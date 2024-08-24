@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function changeNavHighlight() {
         let index = sections.length;
 
-        while (--index && (window.scrollY + window.innerHeight * 0.1 < sections[index].offsetTop)) {}
+        // Adjust the threshold to 2% into the viewport for even earlier highlight
+        while (--index && (window.scrollY + window.innerHeight * 0.02 < sections[index].offsetTop)) {}
         
         navLinks.forEach((link) => link.classList.remove('active'));
         navLinks[index].classList.add('active');
