@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let index = sections.length;
 
         // Adjust the threshold to trigger highlighting just before the section enters the viewport
-        while (--index && (window.scrollY + window.innerHeight * 0.1 < sections[index].offsetTop)) {}
+        while (--index && (window.scrollY + window.innerHeight * 0.6 < sections[index].offsetTop)) {}
         
         navLinks.forEach((link) => link.classList.remove('active'));
         if (navLinks[index]) {
