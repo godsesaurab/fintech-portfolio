@@ -26,15 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function changeNavHighlight() {
         let index = sections.length;
 
-        // Check if the top of the section is within the viewport
-        while (--index && window.scrollY + 10 < sections[index].offsetTop) {}
-
+        while (--index && (window.scrollY + window.innerHeight * 0.1 < sections[index].offsetTop)) {}
+        
         navLinks.forEach((link) => link.classList.remove('active'));
-        if (navLinks[index]) {
-            navLinks[index].classList.add('active');
-        }
+        navLinks[index].classList.add('active');
     }
 
     window.addEventListener('scroll', changeNavHighlight);
-    changeNavHighlight(); // Initial call to set the correct section on load
 });
