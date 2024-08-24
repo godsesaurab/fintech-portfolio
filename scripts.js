@@ -19,19 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Highlight the current section in the navigation
+    // Highlight the current section in the navigation with a 10% threshold
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     function changeNavHighlight() {
         let index = sections.length;
 
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
+        while (--index && window.scrollY + (window.innerHeight * 0.1) < sections[index].offsetTop) {}
+        
         navLinks.forEach((link) => link.classList.remove('active'));
         navLinks[index].classList.add('active');
     }
 
-    changeNavHighlight();  // Highlight the first section on page load
     window.addEventListener('scroll', changeNavHighlight);
 });
