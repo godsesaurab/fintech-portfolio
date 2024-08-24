@@ -19,18 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Highlight the current section in the navigation with no offset
+    // Highlight the current section in the navigation
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     function changeNavHighlight() {
         let index = sections.length;
 
-        while (--index && window.scrollY < sections[index].offsetTop) {}
-        
+        // Check if the top of the section is within the viewport
+        while (--index && window.scrollY + 10 < sections[index].offsetTop) {}
+
         navLinks.forEach((link) => link.classList.remove('active'));
-        navLinks[index].classList.add('active');
+        if (navLinks[index]) {
+            navLinks[index].classList.add('active');
+        }
     }
 
     window.addEventListener('scroll', changeNavHighlight);
+    changeNavHighlight(); // Initial call to set the correct section on load
 });
