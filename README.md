@@ -1,5 +1,5 @@
 # fintech-portfolio
-A portfolio showcasing my finance-related data science projects
+A portfolio showcasing my finance-related data science projects : https://godsesaurab.github.io/fintech-portfolio/
 
 List of projects with multiple specific objectives under each subcategory to cover more aspects of Data Science, Finance, Actimize, and Banking:
 
