@@ -3,221 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurab's Fintech Data Science Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #003366;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #003366;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .showcase {
-            background: #00509e;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .showcase h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        .showcase p {
-            font-size: 1.2em;
-        }
-        .main {
-            padding: 40px 0;
-            text-align: center;
-        }
-        .main h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.5em;
-        }
-        .card p {
-            font-size: 1em;
-            color: #666;
-        }
-        .card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #00509e;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #00509e;
-        }
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        footer {
-            background: #336699;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        footer a {
-            color: #99ccff;
-            text-decoration: none;
-        }
+    <title>Saurab Godse's Fintech Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .showcase h1 {
-                font-size: 2.5em;
-            }
-            .showcase p {
-                font-size: 1em;
-            }
-            .main h2 {
-                font-size: 1.5em;
-            }
-            .card {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-            .showcase {
-                padding: 50px 0;
-            }
-            .showcase h1 {
-                font-size: 2em;
-            }
-            .showcase p {
-                font-size: 0.9em;
-            }
-            .main h2 {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    <!-- Disable caching -->
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Saurab's Fintech Data Science Portfolio</h1>
+            <h1>Saurab Godse's Fintech Data Science Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education-experience">Education & Experience</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    
+                    <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                    <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        
+
                 </ul>
             </nav>
         </div>
     </header>
+
     <section class="showcase">
         <div class="container">
             <h1>Welcome to My Portfolio</h1>
-            <p>Explore my finance-related data science projects and get in touch with me.</p>
+            <p>Explore my expertise in fraud analytics, data science, and machine learning.</p>
         </div>
     </section>
+
     <section class="main" id="about">
         <div class="container">
             <h2>About Me</h2>
             <div class="section">
                 <div class="card">
                     <div class="icon">👨‍💻</div>
-                    <h3>About Me</h3>
-                    <p>Brief introduction about yourself.</p>
+                    <h3>Professional Summary</h3>
+                    <p>I am an experienced Data Scientist with 4 years of professional experience in a product-based fintech company. I have a strong background in data analysis, machine learning model deployment, and fraud analytics. I am proficient in Python, SQL, Data Robot, and AWS services, with a proven track record of delivering Fraud Detection ML Models and developing custom automation solutions.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="main" id="education-experience">
+
+    <section class="main" id="experience">
         <div class="container">
-            <h2>Education & Experience</h2>
+            <h2>Professional Experience</h2>
+            <div class="section">
+                <div class="card">
+                    <div class="icon">💼</div>
+                    <h3>Data Scientist - Fraud Analytics</h3>
+                    <p><strong>NICE Actimize | August 2022 – Present | Pune, Maharashtra</strong></p>
+                    <ul>
+                        <li>Developed and deployed collective intelligence models for cross-financial institutions to enhance fraud detection.</li>
+                        <li>Managed containerized machine learning models using Kubernetes and Helm.</li>
+                        <li>Maintained automation solutions for fraud analytics processes using Python and SQL.</li>
+                        <li>Conducted performance analysis and monitoring of ML models for multiple clients.</li>
+                        <li>Collaborated with Product and Implementation teams for support and debugging.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💼</div>
+                    <h3>Data Science Engineer - Actimize Watch</h3>
+                    <p><strong>NICE Actimize | August 2020 – August 2022 | Pune, Maharashtra</strong></p>
+                    <ul>
+                        <li>Analysed large datasets using Python, SQL, and AWS Athena to provide actionable insights.</li>
+                        <li>Developed custom automation utilities in Python.</li>
+                        <li>Integrated machine learning models using SageMaker and Actimize systems.</li>
+                        <li>Automated testing processes, reducing testing time by 60%.</li>
+                        <li>Visualized data to enhance fraud detection reports.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💼</div>
+                    <h3>Node.js Intern</h3>
+                    <p><strong>STUDIUM | November 2018 – January 2019 | Pune, Maharashtra</strong></p>
+                    <ul>
+                        <li>Developed backend solutions using Node.js.</li>
+                        <li>Worked on Redis server caching and log tracking.</li>
+                        <li>Managed databases with MongoDB.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main" id="education">
+        <div class="container">
+            <h2>Education</h2>
             <div class="section">
                 <div class="card">
                     <div class="icon">🎓</div>
-                    <h3>Bachelor of Science in Finance</h3>
-                    <p>XYZ University, 2015 - 2019</p>
-                    <p>Graduated with honors, focusing on financial analysis and data science.</p>
+                    <h3>M. Tech. in Data Science and Engineering</h3>
+                    <p><strong>Birla Institute of Technology And Science, Pilani (BITS Pilani) | 2023</strong></p>
                 </div>
                 <div class="card">
                     <div class="icon">🎓</div>
-                    <h3>Master of Science in Data Science</h3>
-                    <p>ABC University, 2019 - 2021</p>
-                    <p>Specialized in machine learning and big data analytics.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">💼</div>
-                    <h3>Data Scientist</h3>
-                    <p>Fintech Corp, 2021 - Present</p>
-                    <p>Working on predictive models and data analysis for financial products.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">💼</div>
-                    <h3>Financial Analyst</h3>
-                    <p>Finance Solutions, 2019 - 2021</p>
-                    <p>Conducted financial analysis and created reports for clients.</p>
+                    <h3>B.E. in Computer Engineering</h3>
+                    <p><strong>Vishwakarma Institute of Information Technology, Pune (VIIT) | 2020</strong></p>
                 </div>
             </div>
         </div>
@@ -230,60 +127,94 @@
                 <div class="card">
                     <div class="icon">💻</div>
                     <h3>Technical Skills</h3>
-                    <p>Python, R, SQL, Machine Learning, Data Visualization</p>
+                    <p>Python, SQL, Pandas, Seaborn, Matplotlib, Tableau, SageMaker, Actimize AIS, PMML, TensorFlow, Kubernetes, Helm, Docker, Flask, HTML, CSS, JavaScript, PHP, MongoDB, MSSQL, Postgres, AWS S3, AWS services.</p>
                 </div>
                 <div class="card">
                     <div class="icon">🤝</div>
                     <h3>Soft Skills</h3>
-                    <p>Communication, Teamwork, Problem-solving</p>
+                    <p>Problem-Solving, Communication, Team Collaboration, Analytical Thinking, Time Management, Adaptability, Attention to Detail, Leadership, Customer Focus, Project Management.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="main" id="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Projects & Publications</h2>
             <div class="section">
                 <div class="card">
                     <div class="icon">📈</div>
-                    <h3>Stock Price Prediction</h3>
-                    <p>Predicting stock prices using historical data and machine learning models.</p>
-                    <a href="https://github.com/godsesaurab/stock-price-prediction" target="_blank">View Project</a>
+                    <h3>Personality Traits Recognition for Interview Processes</h3>
+                    <p>Developed a prototype to predict personality traits of interviewees based on verbal and non-verbal cues.</p>
+                    <a href="http://sersc.org/journals/index.php/IJAST/article/view/6671" target="_blank">View Publication</a>
                 </div>
                 <div class="card">
-                    <div class="icon">💳</div>
-                    <h3>Credit Risk Analysis</h3>
-                    <p>Assessing credit risk using financial data and machine learning models.</p>
-                    <a href="https://github.com/godsesaurab/credit-risk-analysis" target="_blank">View Project</a>
-                </div>
-                <div class="card">
-                    <div class="icon">🔍</div>
-                    <h3>Fraud Detection</h3>
-                    <p>Detecting fraudulent transactions using machine learning techniques.</p>
-                    <a href="https://github.com/godsesaurab/fraud-detection" target="_blank">View Project</a>
+                    <div class="icon">📊</div>
+                    <h3>Human Activity Recognition Using Smartphone</h3>
+                    <p>Predicted user activities by capturing data from a gyroscope and accelerometer.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="main" id="certifications">
         <div class="container">
             <h2>Certifications</h2>
             <div class="section">
                 <div class="card">
                     <div class="icon">📜</div>
-                    <h3>Data Science Certification</h3>
-                    <p>Issued by XYZ Institute</p>
+                    <h3>AWS Cloud Practitioner Essentials</h3>
+                    <p>Amazon Web Services | Jul 2021</p>
+                    <a href="https://drive.google.com/file/d/1DDQHGFITeTq8fvL_y8yoULa0opolr7o5/view" target="_blank">View Certification</a>
                 </div>
                 <div class="card">
                     <div class="icon">📜</div>
-                    <h3>Machine Learning Certification</h3>
-                    <p>Issued by ABC Organization</p>
+                    <h3>Basic AIS and ActOne Platform Training</h3>
+                    <p>NICE Actimize | Sep 2020</p>
+                    <a href="https://drive.google.com/file/d/1SH2H57xDElEdOEFoADEiBQlYFEAmXyxI/view" target="_blank">View Certification</a>
+                </div>
+                <div class="card">
+                    <div class="icon">📜</div>
+                    <h3>Certified Machine Learning Master</h3>
+                    <p>GSDC - Global Skill Development Council | Sep 2021</p>
+                    <a href="https://www.gsdcouncil.org/badge/TH5w7m" target="_blank">View Certification</a>
                 </div>
             </div>
         </div>
     </section>
-    <footer id="contact">
-        <p>Contact me via <a href="mailto:godsesaurab@gmail.com" target="_blank">email</a> (godsesaurab@gmail.com), or connect with me on <a href="https://www.linkedin.com/in/saurabgodse/" target="_blank">LinkedIn</a> (https://www.linkedin.com/in/saurabgodse/).</p>
+
+    <section class="main" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="section">
+                <div class="card">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>Feel free to reach out via email.</p>
+                    <a href="mailto:godsesaurab@gmail.com">godsesaurab@gmail.com</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🔗</div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me on LinkedIn.</p>
+                    <a href="https://www.linkedin.com/in/saurabgodse" target="_blank">View LinkedIn Profile</a>
+                </div>
+                <div class="card">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>You can also contact me via phone.</p>
+                    <a href="tel:+919673918607">+91 96739 18607</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Saurab Godse. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
